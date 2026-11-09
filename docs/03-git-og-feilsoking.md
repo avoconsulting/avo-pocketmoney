@@ -38,7 +38,7 @@ Etter neste endring: stage filene du vil ta med, lag en commit og bruk `git push
 | `git` finnes ikke                       | Installer Git og åpne VS Code på nytt. På Mac kan Command Line Tools mangle.                                        |
 | GitHub viser 404                        | Sjekk riktig konto og eventuell organisasjons-SSO. Be Julie sjekke medlemskap/tilgang.                              |
 | `Permission denied` eller 403 ved push  | Du kan ha lesetilgang uten skrivetilgang. Be Julie sjekke, eller jobb lokalt/i par.                                 |
-| `npm ci` sier at `package.json` mangler | Terminalen må stå i prosjektmappen `avo-pockeymoney`. Bruk `pwd` på Mac eller `cd` uten argument på Command Prompt. |
+| `npm ci` sier at `package.json` mangler | Terminalen må stå i prosjektmappen `avo-pocketmoney`. Bruk `pwd` på Mac eller `cd` uten argument på Command Prompt. |
 | `npm ci` feiler på nedlasting           | Sjekk nett/VPN og organisasjonens pakkeregister med en veileder. Ikke slå av sertifikatkontroll.                    |
 | Node-versjonen er for gammel            | Installer Node 24 LTS og åpne terminalen på nytt.                                                                   |
 | Port 5173 er opptatt                    | Vite velger normalt neste port. Bruk Local-adressen som faktisk vises.                                              |

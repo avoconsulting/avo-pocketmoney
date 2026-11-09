@@ -28,7 +28,7 @@ git --version
 
 ## 2. Sjekk GitHub-tilgang
 
-Logg inn på GitHub i nettleseren og åpne https://github.com/avoconsulting/avo-pockeymoney. Du skal se prosjektfilene. Får du 404 eller en forespørsel om organisasjonstilgang/SSO, si fra til Julie før økten. Du kan lese et repo uten nødvendigvis å ha lov til å laste opp endringer.
+Logg inn på GitHub i nettleseren og åpne https://github.com/avoconsulting/avo-pocketmoney. Du skal se prosjektfilene. Får du 404 eller en forespørsel om organisasjonstilgang/SSO, si fra til Julie før økten. Du kan lese et repo uten nødvendigvis å ha lov til å laste opp endringer.
 
 Dette er to forskjellige ting:
 
@@ -39,7 +39,7 @@ Dette er to forskjellige ting:
 
 1. Åpne kommandopaletten: **Cmd+Shift+P** på Mac eller **Ctrl+Shift+P** på Windows.
 2. Søk etter **Git: Clone**.
-3. Lim inn `https://github.com/avoconsulting/avo-pockeymoney.git`.
+3. Lim inn `https://github.com/avoconsulting/avo-pocketmoney.git`.
 4. Velg en mappe du finner igjen, og trykk **Open** når kloningen er ferdig.
 5. Hvis VS Code spør om du stoler på prosjektet, vurder at adressen er riktig og at dette er øvingsrepoet Julie har delt.
 
@@ -48,8 +48,8 @@ Hvis GitHub krever innlogging, følg innloggingen i nettleseren. Ikke lim passor
 Alternativ med terminal:
 
 ```sh
-git clone https://github.com/avoconsulting/avo-pockeymoney.git
-cd avo-pockeymoney
+git clone https://github.com/avoconsulting/avo-pocketmoney.git
+cd avo-pocketmoney
 ```
 
 **Sjekkpunkt:** Du ser `package.json`, `README.md` og mappen `src` i venstremenyen. Åpne terminalen i denne prosjektmappen.

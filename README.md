@@ -17,8 +17,8 @@ Ingen erfaring med kode er nødvendig. Jobb gjerne i par; bytt på å bruke tast
 Krever Node.js 24 LTS (minimum 22.12), npm og Git. Bruk lenken Vite skriver i terminalen; porten kan variere.
 
 ```sh
-git clone https://github.com/avoconsulting/avo-pockeymoney.git
-cd avo-pockeymoney
+git clone https://github.com/avoconsulting/avo-pocketmoney.git
+cd avo-pocketmoney
 npm ci
 npm run dev
 ```
