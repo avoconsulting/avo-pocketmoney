@@ -59,6 +59,6 @@ Etter neste endring: stage filene du vil ta med, lag en commit og bruk `git push
 
 ## Hvis du mister tråden
 
-Stopp og vis en veileder hva du ser. Du kan alltid fortsette med nivå 1, jobbe med en makker eller sammenligne med [løsningsforslaget](05-losningsforslag.md). Ingen trenger å holde samme tempo.
+Stopp og vis en veileder hva du ser. Du kan alltid fortsette med nivå 1, jobbe med en makker eller be Julie om et løsningsforslag. Ingen trenger å holde samme tempo.
 
 Referanser: [Git i VS Code](https://code.visualstudio.com/docs/sourcecontrol/overview), [GitHub: pull requests](https://docs.github.com/en/pull-requests).

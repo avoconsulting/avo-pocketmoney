@@ -43,11 +43,8 @@ npm run build
 
 Appen bruker React og Vite med JavaScript og vanlig CSS. Dette er et bevisst mindre oppsett enn originalens Next.js-app. `npm ci` installerer alle nødvendige prosjektpakker; ingen ekstra VS Code-utvidelser er påkrevd. `package-lock.json` gir alle de samme pakkeversjonene.
 
-## Til Julie og veiledere
+## Felles informasjon
 
-- [Loop-tekst og lenker](docs/00-loop.md)
-- [Kjøreplan, forberedelser og suksesskriterier](docs/04-veileder.md)
-- [Løsningsforslag og kontrollpunkter](docs/05-losningsforslag.md)
-- [Et ferdig eksempel på hurtigknapper](examples/QuickAmounts.solution.jsx)
+- [Samleside med informasjon og guidelenker](docs/00-loop.md)
 
 Hold `main` som et stabilt utgangspunkt gjennom økten. Deltakere bruker egne branches; PR-er kan gjennomgås uten å merges underveis. Første versjon er også merket `workshop-start`.

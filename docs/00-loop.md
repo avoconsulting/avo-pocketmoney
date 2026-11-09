@@ -23,7 +23,3 @@ Når vi er ferdige, skal du kunne vise endringen din, forklare forskjellen på �
 ## Etterpå
 
 Fortsett med bonusoppgavene eller ta med arbeidsmåten til et eget prosjekt. Guiden ligger her også etter kodeonsdag.
-
----
-
-Til Julie: Kopier teksten over inn i Loop. For å ha hele guiden i Loop, opprett undersider og kopier inn `01-kom-i-gang.md`, `02-oppgaver.md` og `03-git-og-feilsoking.md`. Bytt deretter lenkene over til Loop-undersidene. GitHub-lenkene virker som alternativ for dem som har repo-tilgang. Veileder og løsningsforslag kan ligge på en egen underside.
