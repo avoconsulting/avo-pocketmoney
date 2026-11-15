@@ -14,16 +14,22 @@ Ingen erfaring med kode er nødvendig. Jobb gjerne i par; bytt på å bruke tast
 
 ## Hurtigstart
 
-Krever Node.js 24 LTS (minimum 22.12), npm og Git. Bruk lenken Vite skriver i terminalen; porten kan variere.
+Krever Node.js 24 LTS (minimum 22.12), npm og Git. Logg inn med en vanlig, gratis personlig GitHub-konto og lag først en **fork til din egen konto** fra [Avo-repoet](https://github.com/avoconsulting/avo-pocketmoney/fork). Behold navnet `avo-pocketmoney`.
+
+Erstatt `DITT-BRUKERNAVN` med GitHub-brukernavnet ditt før du kjører kommandoene. Klon **din egen fork**, slik at du kan pushe uten skriverettigheter i Avo. Se [hele oppsettsguiden](docs/01-kom-i-gang.md) for klikk-for-klikk i VS Code.
 
 ```sh
-git clone https://github.com/avoconsulting/avo-pocketmoney.git
+git clone https://github.com/DITT-BRUKERNAVN/avo-pocketmoney.git
 cd avo-pocketmoney
 npm ci
 npm run dev
 ```
 
-Åpne vanligvis http://127.0.0.1:5173. Stopp serveren med Ctrl+C.
+Åpne **Local**-adressen Vite viser, vanligvis http://127.0.0.1:5173. Stopp serveren med Ctrl+C. Åpne prosjektmappen i VS Code med **File → Open Folder** hvis du brukte terminalen til å klone.
+
+Arbeidsflyten er **fork → klon egen fork → egen branch → endring → commit → push til egen fork → PR til Avo**. Start appen før du begynner på [oppgavene](docs/02-oppgaver.md).
+
+Kjør sjekkene i en ekstra terminal i prosjektmappen:
 
 ```sh
 npm test

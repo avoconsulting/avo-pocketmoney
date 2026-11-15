@@ -4,13 +4,19 @@ Målet er at du kan gjøre, forstå og dele en endring. Begynn på nivå 1. Det 
 
 Appen er en liten versjon av Bumle. Alle data er fiktive, og appen trenger ingen kontoer. Saldo lagres bare mens siden er åpen. Under utvikling kan React bevare eller nullstille tilstanden når du endrer filer; bruk **Nullstill demo** for å starte fra 450 kr.
 
+**Før du begynner:** Følg [oppsettsguiden](01-kom-i-gang.md). Appen skal kjøre lokalt, og `origin` skal peke til **din egen fork**. Appen trenger ingen innlogging, men du bruker GitHub-kontoen din når du deler kode.
+
+Hele flyten er **fork → klon egen fork → egen branch → endring → commit → push til egen fork → PR til Avo**. En branch skiller oppgaven din fra `main`; en fork gir deg et eget repo du kan laste opp til.
+
 ## Første steg: lag din egen branch
 
-Klikk på `main` nederst til venstre i VS Code, velg **Create new branch**, og gi den et unikt navn, for eksempel `julie/bedre-simulator`. Ved like navn, legg til initialer eller et tall.
+Klikk på `main` nederst til venstre i VS Code og velg **Create new branch**. Du kan også åpne kommandopaletten med **Cmd+Shift+P / Ctrl+Shift+P** og velge **Git: Create Branch**. Gi den et navn, for eksempel `dittnavn/bedre-simulator`, med ditt navn, små bokstaver og uten mellomrom.
 
 **Hvorfor:** En branch lar deg jobbe med en endring uten å endre det felles utgangspunktet. Lag branchen før du begynner å redigere.
 
 **Sjekk:** Du ser ditt branch-navn nederst til venstre. Ikke velg **Publish Branch** før du er klar til å dele.
+
+Alternativ i terminalen: `git switch -c dittnavn/bedre-simulator`. Bruk enten VS Code-valget eller kommandoen; du trenger ikke gjøre begge deler.
 
 ## Nivå 1 · Gjør appen litt bedre
 
@@ -25,6 +31,8 @@ Klikk på `main` nederst til venstre i VS Code, velg **Create new branch**, og g
 **Sjekkpunkt:** Endringen vises i nettleseren, og du kan vise den i Git-historikken. Forklar til makkeren: Hva er forskjellen på å lagre en fil og lage en commit?
 
 Hvis VS Code tilbyr å stage alle filer automatisk, velg heller filene du faktisk ønsker å ta med. `node_modules` skal ikke inn i Git.
+
+**Første commit er nok til å øve på hele arbeidsflyten.** Du kan nå gå rett til [Del endringen og få tilbakemelding](#del-endringen-og-få-tilbakemelding). Du trenger ikke fullføre nivå 2 for å sende en PR.
 
 ## Nivå 2 · Lag hurtigknapper
 
@@ -55,15 +63,51 @@ Du kan bruke AI til å få forklart `onClick` eller foreslå en løsning, men be
 
 ## Del endringen og få tilbakemelding
 
-1. Velg **Publish Branch** i VS Code. Ved første gangs bruk kan du måtte logge inn på GitHub i nettleseren. Publiser til `origin`, øvingsrepoet du klonet.
-2. Åpne repoet på GitHub. Velg **Compare & pull request**, eller **Pull requests → New pull request**. Base er `main`; compare er din branch.
-3. Beskriv problemet du løste og hvordan du testet. Repoet har en mal med spørsmålene klare.
-4. Be en makker åpne **Files changed** og gi én konkret tilbakemelding, muntlig eller som kommentar.
-5. Gjør eventuelt en forbedring lokalt, lag en ny commit og velg **Push**. Samme PR oppdateres.
+### 1. Test og last opp til din egen fork
+
+1. Prøv endringen i nettleseren og les diffen. Åpne en **ekstra terminal** med **Terminal → New Terminal** i prosjektmappen. La terminalen med `npm run dev` fortsette å kjøre.
+2. Kjør `npm test` og deretter `npm run build`. Begge skal fullføre uten feil. En vellykket bygging alene bekrefter ikke at knappene gjør riktig ting; sjekk også akseptansekriteriene i nettleseren.
+3. Kontroller at filene er lagret og committet, og at du står på oppgavebranchen. Velg **Publish Branch** i Source Control. Hvis du blir spurt om remote, velg **origin**, som skal være **din egen fork**. Ikke velg å opprette et nytt repo med **Publish to GitHub**; du har allerede en fork.
+4. Ved første push kan du bli bedt om å logge inn eller godkjenne Git-tilgang i nettleseren. Bruk **samme personlige konto som eier forken**, og følg innloggingen tilbake til VS Code. Hvis terminalen ber om GitHub-passord i stedet, se [feilsøkingen](03-git-og-feilsoking.md).
+
+Alternativ til **Publish Branch**, i terminalen:
+
+```sh
+git push -u origin HEAD
+```
+
+`HEAD` betyr branchen du står på. Kommandoen laster opp commitene og kobler lokal branch til branchen i din fork. **Sjekkpunkt:** Åpne **din fork** på GitHub, velg oppgavebranchen i branch-menyen og finn din commit og endrede fil. Push har ennå ikke endret noe i Avo-repoet.
+
+### 2. Opprett pull request til Avo
+
+1. Åpne [Avo-repoets PR-side](https://github.com/avoconsulting/avo-pocketmoney/pulls), og velg **New pull request**. Hvis du bruker en snarvei som **Compare & pull request**, kontroller de samme feltene nedenfor.
+2. Velg **compare across forks** dersom din fork ikke vises som et valg.
+3. Sett feltene slik:
+
+| Felt                            | Velg                                                                |
+| ------------------------------- | ------------------------------------------------------------------- |
+| **base repository**             | `avoconsulting/avo-pocketmoney` – repoet du foreslår en endring til |
+| **base**                        | `main`                                                              |
+| **head repository / head fork** | `DITT-BRUKERNAVN/avo-pocketmoney` – din fork                        |
+| **compare**                     | Din oppgavebranch, for eksempel `dittnavn/bedre-simulator`          |
+
+4. Les **Files changed** eller diffen på sammenligningssiden. Den skal inneholde dine endringer. Ser du ingen forskjell, sjekk at du valgte oppgavebranchen og at du faktisk pushet commitene.
+5. Velg **Create pull request**, og skriv en kort tittel. Fyll ut malen: Hva forbedret du, og hvordan sjekket du resultatet? Hvis malen ikke kommer opp, skriv de samme to punktene selv.
+6. Velg **Create pull request** for å sende forslaget. Innstillingen for å la vedlikeholdere redigere branchen din er valgfri; den er ikke nødvendig for øvelsen.
+
+**Sjekkpunkt:** PR-en har et nummer, har status **Open**, og adressen begynner med `https://github.com/avoconsulting/avo-pocketmoney/pull/`. Øverst vises en foreslått endring **til Avo sin `main` fra din fork og branch**. En PR er et forslag; koden er ikke flettet inn ennå.
+
+### 3. Gjennomgå i par og oppdater samme PR
+
+1. Del PR-lenken med en makker. Be makkeren åpne **Files changed**, forklare hva de tror endringen gjør og gi ett konkret forbedringsforslag. Muntlig tilbakemelding holder; formell godkjenning er ikke nødvendig.
+2. Gjør eventuelt en forbedring lokalt **på den samme branchen**. Lagre, test, stage og lag en ny commit.
+3. Velg **Push** fra menyen i Source Control, eller kjør `git push` i terminalen. Åpne PR-en igjen og sjekk at den nye commiten vises. Du skal ikke opprette en ny PR for denne oppdateringen.
+
+GitHub-kontrollene kan trenge godkjenning fra Julie første gang noen bidrar fra en fork. Det er ikke en feil i koden. Be henne se på det; bruk også de lokale sjekkene mens dere venter. Hvis en kontroll faktisk feiler, åpne detaljene og les feilen.
 
 **Vi gjennomgår PR-ene, men lar være å merge dem til `main` under økten.** Da beholder alle det samme utgangspunktet.
 
-Mangler du skriverettigheter? Be Julie sjekke tilgang. Hvis organisasjonen tillater forks, kan du lage en fork, klone den og sende PR tilbake til originalen. Hvis forks er sperret: fortsett lokalt og vis diffen til en makker, eller jobb på makkerens branch på deres maskin. Du får fortsatt øvd på Git; deling via GitHub kan fullføres når tilgangen er på plass.
+Du trenger ikke skriverettigheter i Avo-repoet for denne arbeidsflyten. Får du 403 ved push, sjekk at `origin` peker til din fork og at du bruker kontoen som eier den. Hvis nett eller innlogging stopper deg, fortsett lokalt og vis diffen til en makker. Se [Git-hjelpen](03-git-og-feilsoking.md).
 
 ## Nivå 3 · Velg én egen forbedring
 
@@ -78,4 +122,8 @@ Test selv, les diffen, lag commit og oppdater PR-en. Er du ferdig tidlig? Hjelp 
 
 ## Før du går
 
-Vis én endring og forklar hvorfor den er nyttig. Fortell hva du vil prøve videre. Kan du forklare forskjellen på **lagre**, **commit** og **push** med egne ord?
+Vis én endring og forklar hvorfor den er nyttig. Fortell hva du vil prøve videre. Kan du forklare forskjellen på **fork og branch**, og på **lagre, commit, push og PR** med egne ord?
+
+## Referanser
+
+[GitHub: bidra via en fork](https://docs.github.com/en/get-started/exploring-projects-on-github/contributing-to-a-project) · [GitHub: opprett en PR fra en fork](https://docs.github.com/en/pull-requests/how-tos/create-pull-requests/creating-a-pull-request-from-a-fork).

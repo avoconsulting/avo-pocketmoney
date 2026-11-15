@@ -8,7 +8,9 @@ Du trenger ikke være koder for å delta. Vi tar det steg for steg og hjelper hv
 
 ## Før du kommer
 
-Ta med PC eller Mac og følg [oppsettsguiden](https://github.com/avoconsulting/avo-pocketmoney/blob/main/docs/01-kom-i-gang.md). Den forklarer installasjon av VS Code, Git, Node.js og prosjektpakkene, og hvordan du sjekker at alt fungerer. Ingen betalte tjenester er nødvendige.
+Ta med PC eller Mac og følg [oppsettsguiden](https://github.com/avoconsulting/avo-pocketmoney/blob/main/docs/01-kom-i-gang.md). Den forklarer installasjon av VS Code, Git, Node.js og prosjektpakkene, hvordan du lager en egen fork, og hvordan du starter appen. En vanlig, gratis personlig GitHub-konto holder. Repoet og guiden er offentlige; du trenger ikke medlemskap i Avo sin GitHub-organisasjon for å følge opplegget.
+
+Vi øver på hele flyten: **fork → klon egen fork → egen branch → endring → commit → push → pull request til Avo**.
 
 **Har du spørsmål eller står fast med oppsettet, si fra til Julie, så får du hjelp!** Du kan delta selv om du ikke har fått oppsettet til; vi finner en makker og løser det sammen.
 
