@@ -1,4 +1,4 @@
-# Kodeonsdag 11.11. · Fra prototype til samarbeid
+# Kodeonsdag 18.11. · Fra prototype til samarbeid
 
 Vi starter kl. 16.00 og holder på utover ettermiddagen. Det blir pizza! 🍕
 
