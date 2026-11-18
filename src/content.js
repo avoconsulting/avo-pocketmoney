@@ -3,9 +3,9 @@ export const content = {
   greeting: "Hei, Alex!",
   headline: "Små penger. Store muligheter.",
   introduction: "En liten oversikt over pengene dine – og alt du drømmer om.",
-  simulatorTitle: "Hva har jeg råd til?",
+  simulatorTitle: "Hva har du igjen etter kjøpet?",
   simulatorDescription:
-    "Prøv et beløp og se hva du har igjen før du bestemmer deg.",
+    "Prøv en pris og se hvor mye penger du har igjen. Pengene trekkes først når du trykker «Registrer kjøp».",
   goalName: "En ny sykkel",
   goalEmoji: "🚲",
 };
